@@ -1,2 +1,41 @@
-@use "util/variables";
-@use "util/mixins";
+@import "util/variables";
+@import "util/mixins";
+
+// Reset
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: $fs-body;
+  margin: 0;
+  padding: 0;
+}
+
+// Flexbox Helper Classes
+.flex {
+  display: flex;
+
+  &-jc {
+    &-c {
+      justify-content: center;
+    }
+
+    &-sb {
+      justify-content: space-between;
+    }
+  }
+
+  &-ai {
+    &-c {
+      align-items: center;
+    }
+  }
+}
